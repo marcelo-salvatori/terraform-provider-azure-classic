@@ -14,7 +14,7 @@ optionally be configured with a security group to be associated with the subnet.
 ## Example Usage
 
 ```hcl
-resource "azure_virtual_network" "default" {
+resource "azurerm_virtual_network" "default" {
   name          = "test-network"
   address_space = ["10.1.2.0/24"]
   location      = "West US"
@@ -32,6 +32,8 @@ The following arguments are supported:
 
 * `name` - (Required) The name of the virtual network. Changing this forces a
     new resource to be created.
+   
+* `resource_group_name` - (Required) Specifies the Resource Group where the Virtual Network should exist. Changing this forces a new resource to be created.
 
 * `address_space` - (Required) The address space that is used the virtual
     network. You can supply more than one address space. Changing this forces
